@@ -1,0 +1,52 @@
+GET http://localhost:5000/api/auth/
+
+###
+
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "nhu2",
+    "password": "nhu2"
+}
+
+### 
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "nhu",
+    "password": "nhu"
+}
+
+### 
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2M0ZjZiMjFiZjVlYTgzODhkNmM1NDIiLCJpYXQiOjE2NzM4NTI1OTR9.9TxDMTEvw7xbX22_IsbEzJeUP7AQ6GCVm3IbyneK0os
+
+{
+    "title": "js",
+    "description": "abc",
+    "url": "google.com"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2M0ZjZiMjFiZjVlYTgzODhkNmM1NDIiLCJpYXQiOjE2NzQ0MzYxMzl9.v4uz0xQ4IJbh0GDH_0koBnuDRDcZE5Lt9_6kePq2PQE
+
+###
+PUT http://localhost:5000/api/posts/63cb5ac699391c72a24d1173
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2M0ZjZiMjFiZjVlYTgzODhkNmM1NDIiLCJpYXQiOjE2NzQ0MzYxMzl9.v4uz0xQ4IJbh0GDH_0koBnuDRDcZE5Lt9_6kePq2PQE
+
+{
+    "title": "php",
+    "description": "a",
+    "url": "https://a",
+    "status": "to learn"
+}
+
+###
+DELETE http://localhost:5000/api/posts/63c4f16454092f3a181f7123
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2M2M0MTI2MGMwNTlkMDAyMDdhNTg4NzQiLCJpYXQiOjE2NzM4NTU5NjN9.RUYTwyBisqEIWgBvR6DA6eFQtlZkRGl1b71xlN8PDZY
